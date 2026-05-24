@@ -12,10 +12,10 @@
 
 ## 🛠 Skills
 - Python
-- Git & GitHub
+- React
 - AI Tools
-- Data Analysis
-- VS Code
+- Digital banking innovators
+-
 
 ---
 
