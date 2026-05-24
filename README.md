@@ -21,10 +21,8 @@
 
 ## 📈 Currently Learning
 - Machine Learning
-- Pandas
-- Team Collaboration with Git
 - AI Automation
-
+-model development
 ---
 
 ## 🔗 Connect With Me
