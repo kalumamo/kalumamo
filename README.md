@@ -1,4 +1,4 @@
-# Hi 👋, I'm Kalu Mamo
+# Hi 👋, I'm Kalu Mamo zegene
 
 ## 🚀 About Me
 - 💻 Passionate about Technology and AI
