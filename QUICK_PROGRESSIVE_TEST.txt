@@ -1,0 +1,395 @@
+================================================================================
+        AHADU PULSE - 4 PROGRESSIVE DATASETS - QUICK TEST GUIDE
+================================================================================
+
+📁 LOCATION: D:\video\AHADU PULSE\
+
+✅ ALL 4 DATASETS CREATED AND READY TO UPLOAD
+
+================================================================================
+                        THE 4 DATASETS
+================================================================================
+
+1. DATASET_1_INITIAL.xlsx (June 22, 2026)
+   ────────────────────────────────────────────────────────────────────────
+   Scenario: INITIAL BASELINE
+   
+   Expected Scores:
+   ├─ MOBILE_01: 90    (HIGH) ✅
+   ├─ CARD_01:   70    (MEDIUM) ⚠️
+   └─ ATM_01:    42    (LOW) 🚨
+   
+   Expected Outputs:
+   ├─ Rankings: 90 > 70 > 42 (correctly sorted)
+   ├─ Alerts: 0 / 3 / 6+ (for each product)
+   ├─ Recommendations: 1 / 4 / 6+ (for each product)
+   └─ Dashboard: Average 67.3
+
+2. DATASET_2_WEEK2.xlsx (June 29, 2026)
+   ────────────────────────────────────────────────────────────────────────
+   Scenario: WEEK 2 - CHANGES OBSERVED
+   Changes: MOBILE improves, CARD stable, ATM worsens
+   
+   Expected Scores:
+   ├─ MOBILE_01: 92+   (was 90, +2 improvement) ↑
+   ├─ CARD_01:   70    (was 70, no change) →
+   └─ ATM_01:    40-   (was 42, -2 worsening) ↓
+   
+   Expected Changes on Dashboard:
+   ├─ Average score: Changes from 67.3
+   ├─ MOBILE: Score increases (90 → 92+)
+   ├─ CARD: Score stays same (70 → 70)
+   ├─ ATM: Score decreases (42 → 40-)
+   ├─ Previous scores visible for each
+   ├─ New alerts generated for ATM
+   ├─ Alerts increase: 0→0 / 3→3 / 6+→8+
+   └─ Recommendations updated
+
+3. DATASET_3_WEEK3.xlsx (July 6, 2026)
+   ────────────────────────────────────────────────────────────────────────
+   Scenario: WEEK 3 - TRENDS ACCELERATING
+   Changes: MOBILE continues up, CARD declining, ATM crisis
+   
+   Expected Scores:
+   ├─ MOBILE_01: 94+   (was 92+, +2 more improvement) ↑↑
+   ├─ CARD_01:   68-   (was 70, -2 declining) ↓
+   └─ ATM_01:    35-   (was 40-, -5 worse crisis) ↓↓
+   
+   Expected Changes on Dashboard:
+   ├─ MOBILE: 92+ → 94+ (clear upward trend)
+   ├─ CARD: 70 → 68- (clear downward trend)
+   ├─ ATM: 40- → 35- (crisis worsening)
+   ├─ Rankings remain: #1, #2, #3 (but with different scores)
+   ├─ Alerts for CARD: 3 → 5+ (now has alerts)
+   ├─ Alerts for ATM: 8+ → 10+ (more critical)
+   ├─ Recommendations become more urgent
+   └─ Trend arrows visible on Scores page
+
+4. DATASET_4_WEEK4.xlsx (July 13, 2026)
+   ────────────────────────────────────────────────────────────────────────
+   Scenario: WEEK 4 - STABILIZING (Final Status)
+   Changes: MOBILE peaks, CARD poor, ATM critical
+   
+   Expected Scores:
+   ├─ MOBILE_01: 96+   (was 94+, +2 to peak) ↑
+   ├─ CARD_01:   65-   (was 68-, -3 further decline) ↓
+   └─ ATM_01:    30    (was 35-, -5 critical) ↓
+   
+   Expected Final Status:
+   ├─ MOBILE: Peak performance (96+)
+   ├─ CARD: Poor performance (65-)
+   ├─ ATM: Critical state (30)
+   ├─ Score Progression Visible:
+   │  • MOBILE: 90 → 92+ → 94+ → 96+ (steady up) ↑
+   │  • CARD: 70 → 70 → 68- → 65- (steady down) ↓
+   │  • ATM: 42 → 40- → 35- → 30 (steep down) ↓↓
+   ├─ Final Alerts: 0 / 5-6 / 10+
+   ├─ Final Recommendations: 1 / 7+ / 10+
+   └─ All pages show final period data
+
+================================================================================
+                        HOW TO TEST (4 STEPS)
+================================================================================
+
+STEP 1: UPLOAD DATASET_1_INITIAL.xlsx
+────────────────────────────────────────────────────────────────────────────
+1. Open: http://localhost:3000/dashboard/settings
+2. Click: "Upload KPI Data"
+3. Select: DATASET_1_INITIAL.xlsx
+4. Verify dashboard shows initial data:
+   ✓ Dashboard: 3 products, average 67.3
+   ✓ Rankings: MOBILE(90) > CARD(70) > ATM(42)
+   ✓ Scores: 90, 70, 42 with HIGH/MEDIUM/LOW tiers
+   ✓ Alerts: 0, 3, 6+ pattern
+   ✓ Recommendations: 1, 4, 6+ pattern
+
+STEP 2: UPLOAD DATASET_2_WEEK2.xlsx
+────────────────────────────────────────────────────────────────────────────
+1. Go to: Settings page
+2. Click: "Upload KPI Data"
+3. Select: DATASET_2_WEEK2.xlsx
+4. Verify dashboard CHANGED:
+   ✓ Scores updated: 92+, 70, 40-
+   ✓ Previous scores shown: 90, 70, 42
+   ✓ Score changes visible: +2, 0, -2
+   ✓ Average score changed
+   ✓ New alerts for ATM
+   ✓ All pages refreshed automatically
+
+STEP 3: UPLOAD DATASET_3_WEEK3.xlsx
+────────────────────────────────────────────────────────────────────────────
+1. Go to: Settings page
+2. Click: "Upload KPI Data"
+3. Select: DATASET_3_WEEK3.xlsx
+4. Verify continuing trend:
+   ✓ Scores: 94+, 68-, 35-
+   ✓ Progression clear: 90→92+→94+, 70→70→68-, 42→40-→35-
+   ✓ Trend arrows visible
+   ✓ CARD now has alerts (5+)
+   ✓ ATM has more alerts (10+)
+   ✓ Rankings update
+   ✓ All recommendations updated
+
+STEP 4: UPLOAD DATASET_4_WEEK4.xlsx
+────────────────────────────────────────────────────────────────────────────
+1. Go to: Settings page
+2. Click: "Upload KPI Data"
+3. Select: DATASET_4_WEEK4.xlsx
+4. Verify final status:
+   ✓ Final scores: 96+, 65-, 30
+   ✓ Complete progression visible
+   ✓ MOBILE at peak
+   ✓ CARD declining
+   ✓ ATM critical
+   ✓ Final alerts: 0/5-6/10+
+   ✓ Dashboard shows final period
+
+================================================================================
+                    EXPECTED SCORE CHANGES
+================================================================================
+
+Dataset 1 (Initial):
+   MOBILE: 90      CARD: 70      ATM: 42
+   
+   ↓ (Data changes, metrics improve for MOBILE)
+   
+Dataset 2 (Week 2):
+   MOBILE: 92+ ↑   CARD: 70 →    ATM: 40- ↓
+   (MOBILE up +2,  CARD stable,  ATM down -2)
+   
+   ↓ (Trends continue and accelerate)
+   
+Dataset 3 (Week 3):
+   MOBILE: 94+ ↑   CARD: 68- ↓   ATM: 35- ↓
+   (MOBILE up +2,  CARD down -2, ATM down -5)
+   
+   ↓ (Final measurements)
+   
+Dataset 4 (Week 4):
+   MOBILE: 96+ ↑   CARD: 65- ↓   ATM: 30 ↓
+   (MOBILE up +2,  CARD down -3, ATM down -5)
+
+TOTAL CHANGE OVER 4 WEEKS:
+   MOBILE: 90 → 96+ (+6 improvement)
+   CARD: 70 → 65- (-5 decline)
+   ATM: 42 → 30 (-12 deterioration)
+
+================================================================================
+                    WHAT TO VERIFY
+================================================================================
+
+For Each Upload:
+
+✓ DASHBOARD PAGE
+  ├─ Shows 3 products
+  ├─ Average score changed
+  ├─ All products visible
+  └─ Data from current period shown
+
+✓ RANKINGS PAGE
+  ├─ Products ranked by score
+  ├─ Scores updated
+  ├─ Tiers correct
+  └─ Consistent with Dashboard
+
+✓ SCORES PAGE
+  ├─ Each product shows current score
+  ├─ Previous score shown
+  ├─ Score change visible (↑/→/↓)
+  ├─ Percentage change displayed
+  └─ Component breakdown updated
+
+✓ ALERTS PAGE
+  ├─ Old alerts gone
+  ├─ New alerts based on new data
+  ├─ Severity correct
+  ├─ Descriptions accurate
+  └─ Count matches (0/3/6+, then changes)
+
+✓ RECOMMENDATIONS PAGE
+  ├─ Old recommendations gone
+  ├─ New recommendations generated
+  ├─ Match product status
+  ├─ Prioritized correctly
+  └─ Action items specific
+
+✓ RANKINGS MOVEMENT (4th upload)
+  ├─ Products stay in order (1,2,3)
+  ├─ BUT with very different scores
+  ├─ Previous scores visible
+  ├─ 4-week progression clear
+
+✓ DATA CONSISTENCY
+  ├─ All pages show same period
+  ├─ No mixed old/new data
+  ├─ Product metrics consistent
+  ├─ Dates match upload file
+
+================================================================================
+                    EXPECTED ALERT PROGRESSION
+================================================================================
+
+MOBILE_01 Alerts:
+   Dataset 1: 0 alerts (optimal)
+   Dataset 2: 0 alerts (still optimal)
+   Dataset 3: 0 alerts (still optimal)
+   Dataset 4: 0 alerts (still optimal)
+   
+   → No change - continuously optimal
+
+CARD_01 Alerts:
+   Dataset 1: 3 warnings
+   Dataset 2: 3 warnings (same metrics)
+   Dataset 3: 5+ alerts (declining metrics)
+   Dataset 4: 5-6 alerts (worsening metrics)
+   
+   → Increases - product declining
+
+ATM_01 Alerts:
+   Dataset 1: 6+ critical
+   Dataset 2: 8+ critical (worsening)
+   Dataset 3: 10+ critical (more alerts)
+   Dataset 4: 10+ critical (plateauing at max)
+   
+   → Increases then plateaus - crisis worsening
+
+================================================================================
+                    EXPECTED RECOMMENDATION PROGRESSION
+================================================================================
+
+MOBILE_01 Recommendations:
+   Dataset 1: 1 ("Maintain standards")
+   Dataset 2: 1 ("Continue excellence")
+   Dataset 3: 1 ("Sustain momentum")
+   Dataset 4: 1 ("Peak achieved - maintain")
+   
+   → Message changes, urging maintenance
+
+CARD_01 Recommendations:
+   Dataset 1: 4 ("Improve infrastructure")
+   Dataset 2: 4 (same)
+   Dataset 3: 6 ("Address decline")
+   Dataset 4: 7+ ("Major overhaul needed")
+   
+   → Increases and becomes more urgent
+
+ATM_01 Recommendations:
+   Dataset 1: 6+ ("URGENT hardware fix")
+   Dataset 2: 8+ ("Escalate remediation")
+   Dataset 3: 8+ (same)
+   Dataset 4: 10+ ("Critical overhaul")
+   
+   → Increases and becomes more severe
+
+================================================================================
+                    TROUBLESHOOTING
+================================================================================
+
+Problem: Scores don't change after upload
+Solution: 
+  • Refresh page (Ctrl+R)
+  • Check backend is still running
+  • Check backend logs for errors
+  • Try uploading next dataset
+
+Problem: Old data still showing
+Solution:
+  • Wait 30 seconds
+  • Go to Settings and click "Run Feature Engineering"
+  • Refresh all pages
+  • Check database
+
+Problem: Previous scores not shown
+Solution:
+  • This is OK for first upload
+  • Should show "Previous: 90" starting with 2nd upload
+  • If not shown, reload page
+
+Problem: Alerts don't update
+Solution:
+  • Wait 30 seconds
+  • Refresh page
+  • Check database for new alerts
+
+Problem: Recommendations same as before
+Solution:
+  • May take 60 seconds to generate
+  • Refresh page after waiting
+  • Check backend for processing status
+
+================================================================================
+                    SUCCESS CHECKLIST
+================================================================================
+
+After all 4 uploads complete:
+
+□ All 4 datasets uploaded successfully (no errors)
+□ Each upload took ~20 seconds to process
+□ Dashboard refreshed after each upload
+□ Scores changed with each upload:
+  □ MOBILE: 90 → 92+ → 94+ → 96+
+  □ CARD: 70 → 70 → 68- → 65-
+  □ ATM: 42 → 40- → 35- → 30
+□ Previous scores visible in Scores page
+□ Score changes displayed as percentages
+□ Trend arrows visible (↑ for up, ↓ for down)
+□ Rankings page updated each time
+□ Alerts increased over time for declining products
+□ Recommendations changed based on new status
+□ No mixed data (all pages consistent)
+□ All pages auto-refreshed (no manual refresh needed)
+□ Can see clear 4-week progression
+□ Product performance differences clear
+
+RESULT: System working correctly! ✅
+
+================================================================================
+                    FILES CREATED
+================================================================================
+
+1. DATASET_1_INITIAL.xlsx
+   └─ Initial baseline data (June 22)
+
+2. DATASET_2_WEEK2.xlsx
+   └─ Week 2 data (June 29)
+
+3. DATASET_3_WEEK3.xlsx
+   └─ Week 3 data (July 6)
+
+4. DATASET_4_WEEK4.xlsx
+   └─ Week 4 data (July 13)
+
+Supporting Documents:
+   • PROGRESSIVE_TEST_GUIDE.md (detailed guide)
+   • QUICK_PROGRESSIVE_TEST.txt (this file)
+   • generate_progressive_datasets.py (script that created them)
+
+================================================================================
+                    READY TO TEST!
+================================================================================
+
+1. Start Settings page: http://localhost:3000/dashboard/settings
+
+2. Upload DATASET_1_INITIAL.xlsx (wait for completion)
+
+3. Verify Dashboard shows initial data
+
+4. Come back to Settings
+
+5. Upload DATASET_2_WEEK2.xlsx (verify data changed)
+
+6. Upload DATASET_3_WEEK3.xlsx (verify trend continues)
+
+7. Upload DATASET_4_WEEK4.xlsx (verify final status)
+
+After all 4 uploads:
+   ✓ Scores changed progressively
+   ✓ Rankings updated each time
+   ✓ Alerts escalated appropriately
+   ✓ Recommendations updated
+   ✓ Dashboard refreshed automatically
+   ✓ All pages show current period data
+
+System is working correctly! 🎉
+
+================================================================================

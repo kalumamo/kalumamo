@@ -1,0 +1,338 @@
+================================================================================
+              🚀 PROGRESSIVE DATASET TEST - START HERE 🚀
+================================================================================
+
+✅ 4 COMPLETE DATASETS READY FOR SEQUENTIAL UPLOAD
+
+Location: D:\video\AHADU PULSE\
+
+Files:
+  1. DATASET_1_INITIAL.xlsx (June 22) ← Upload 1st
+  2. DATASET_2_WEEK2.xlsx (June 29) ← Upload 2nd
+  3. DATASET_3_WEEK3.xlsx (July 6) ← Upload 3rd
+  4. DATASET_4_WEEK4.xlsx (July 13) ← Upload 4th
+
+================================================================================
+                         WHAT THIS TESTS
+================================================================================
+
+Every time you upload a dataset, EVERYTHING should refresh and update:
+
+✓ Dashboard - Average score changes
+✓ Products - Product data updated
+✓ Scores - All scores recalculated
+✓ Rankings - Products ranked by new scores
+✓ Alerts - New alerts generated
+✓ Recommendations - New recommendations created
+✓ Predictions - Based on new data
+✓ Reports - Updated with new data
+✓ Executive Insights - Reflect new status
+✓ Users - Same access (unchanged)
+✓ Settings - File uploaded, processed
+
+VERIFICATION: After each upload, you should see DIFFERENT data on all pages.
+
+================================================================================
+                         4-MINUTE QUICK START
+================================================================================
+
+STEP 1: FIRST UPLOAD (30 seconds)
+────────────────────────────────────────────────────────────────────────
+1. Go to: http://localhost:3000/dashboard/settings
+2. Click: "Upload KPI Data"
+3. Select: DATASET_1_INITIAL.xlsx
+4. Wait: ~20 seconds for processing
+5. Expected: "Imported 3 rows, scored 3 products"
+
+STEP 2: VERIFY INITIAL DATA (1 minute)
+────────────────────────────────────────────────────────────────────────
+1. Dashboard: Shows 3 products, average score 67.3
+2. Rankings: MOBILE(90) > CARD(70) > ATM(42)
+3. Scores: 90 HIGH, 70 MEDIUM, 42 LOW
+4. Alerts: 0 / 3 / 6+ alerts
+5. Recommendations: 1 / 4 / 6+ recommendations
+
+STEP 3: SECOND UPLOAD (30 seconds)
+────────────────────────────────────────────────────────────────────────
+1. Go to: Settings page
+2. Click: "Upload KPI Data" (again)
+3. Select: DATASET_2_WEEK2.xlsx
+4. Expected: Data CHANGES after upload
+
+STEP 4: VERIFY CHANGES (1 minute)
+────────────────────────────────────────────────────────────────────────
+CRITICAL TEST - Verify scores changed:
+   • MOBILE: was 90, now 92+ ↑ (UP)
+   • CARD: was 70, now 70 → (SAME)
+   • ATM: was 42, now 40- ↓ (DOWN)
+   
+If scores are THE SAME as upload 1 → PROBLEM (data not refreshing)
+If scores CHANGED → WORKING (data refreshing correctly)
+
+STEP 5: UPLOAD 3 & 4 (Repeat)
+────────────────────────────────────────────────────────────────────────
+Upload Dataset 3, verify scores: 94+, 68-, 35-
+Upload Dataset 4, verify scores: 96+, 65-, 30
+
+================================================================================
+                    EXPECTED SCORE PROGRESSION
+================================================================================
+
+These are the exact scores you should see:
+
+Upload 1 (June 22):        Upload 2 (June 29):        Upload 3 (July 6):        Upload 4 (July 13):
+─────────────────          ─────────────────          ─────────────           ─────────────
+MOBILE: 90                 MOBILE: 92+  ↑             MOBILE: 94+ ↑            MOBILE: 96+  ↑
+CARD: 70                   CARD: 70     →             CARD: 68-  ↓             CARD: 65-    ↓
+ATM: 42                    ATM: 40-     ↓             ATM: 35-   ↓             ATM: 30      ↓
+
+Average: 67.3              Average: 67.3              Average: 65.7            Average: 63.7
+
+IF YOU SEE THIS PROGRESSION: ✅ System working correctly!
+IF ALL SCORES STAY THE SAME: ❌ Problem - data not updating
+
+================================================================================
+                    PAGE-BY-PAGE VERIFICATION
+================================================================================
+
+After EACH upload, check these pages:
+
+DASHBOARD PAGE:
+   Before Upload 2: Shows Upload 1 data (90, 70, 42)
+   After Upload 2: Shows Upload 2 data (92+, 70, 40-)
+   After Upload 3: Shows Upload 3 data (94+, 68-, 35-)
+   After Upload 4: Shows Upload 4 data (96+, 65-, 30)
+   
+RANKINGS PAGE:
+   Before Upload 2: MOBILE(90) > CARD(70) > ATM(42)
+   After Upload 2: MOBILE(92+) > CARD(70) > ATM(40-)
+   After Upload 3: MOBILE(94+) > CARD(68-) > ATM(35-)
+   After Upload 4: MOBILE(96+) > CARD(65-) > ATM(30)
+   
+SCORES PAGE:
+   Should show "Previous Score" section:
+   Upload 2: Previous 90 → Current 92+
+   Upload 3: Previous 92+ → Current 94+
+   Upload 4: Previous 94+ → Current 96+
+
+ALERTS PAGE:
+   Before Upload 2: 0 / 3 / 6+ alerts
+   After Upload 2: 0 / 3 / 8+ alerts (increases)
+   After Upload 3: 0 / 5+ / 10+ alerts (continues increasing)
+   After Upload 4: 0 / 5-6 / 10+ alerts (plateaus)
+
+RECOMMENDATIONS PAGE:
+   Should show updated recommendations:
+   Upload 1: 1 / 4 / 6+ recommendations
+   Upload 2: 1 / 4 / 8+ recommendations (increases)
+   Upload 3: 1 / 6 / 8+ recommendations (more urgent)
+   Upload 4: 1 / 7+ / 10+ recommendations (most urgent)
+
+================================================================================
+                    CRITICAL VERIFICATION
+================================================================================
+
+✓ PASS: System working correctly if:
+  □ Scores change with each upload (90→92→94→96 for MOBILE)
+  □ Previous scores visible in Scores page
+  □ Alerts update with each upload
+  □ Recommendations change based on new status
+  □ Dashboard refreshes automatically
+  □ All pages show data from current period
+  □ No mixing of old and new data
+
+✗ FAIL: Problem if:
+  □ Scores stay the same after upload (always 90, 70, 42)
+  □ Previous scores not showing
+  □ Old alerts still there
+  □ Recommendations don't change
+  □ Dashboard shows mixed data
+  □ Requires manual refresh to see changes
+
+================================================================================
+                    QUICK TEST TIMELINE
+================================================================================
+
+0:00 - Go to Settings page
+0:30 - Upload DATASET_1_INITIAL.xlsx
+1:00 - Verify initial scores: 90, 70, 42
+1:30 - Go to Settings again
+2:00 - Upload DATASET_2_WEEK2.xlsx
+2:30 - Verify scores changed: 92+, 70, 40-
+3:00 - Go to Settings
+3:30 - Upload DATASET_3_WEEK3.xlsx
+4:00 - Verify scores: 94+, 68-, 35-
+
+Total time: ~4 minutes for full test
+
+If each page refreshes with new data → SUCCESS ✅
+
+================================================================================
+                    WHAT EACH UPLOAD REPRESENTS
+================================================================================
+
+Upload 1: BASELINE (Everything Normal)
+   • All products functioning
+   • MOBILE performing excellent
+   • CARD performing ok
+   • ATM in crisis
+
+Upload 2: ONE WEEK LATER (Changes Begin)
+   • MOBILE continues excellent (improves)
+   • CARD stable (no change)
+   • ATM worsens (more problems)
+
+Upload 3: TWO WEEKS LATER (Trends Clear)
+   • MOBILE at new high (strong)
+   • CARD starts declining (new problems)
+   • ATM critical condition (crisis)
+
+Upload 4: THREE WEEKS LATER (Final Status)
+   • MOBILE at peak (best ever)
+   • CARD poor (significant decline)
+   • ATM critical (severe problems)
+
+Each upload shows real business changes over time.
+System should reflect these changes immediately.
+
+================================================================================
+                    DOCUMENTATION FILES
+================================================================================
+
+Quick Reference:
+   • QUICK_PROGRESSIVE_TEST.txt (this explains what to expect)
+
+Detailed Guide:
+   • PROGRESSIVE_TEST_GUIDE.md (step-by-step with details)
+
+Supporting Files:
+   • generate_progressive_datasets.py (script that created datasets)
+
+Data Files:
+   • DATASET_1_INITIAL.xlsx
+   • DATASET_2_WEEK2.xlsx
+   • DATASET_3_WEEK3.xlsx
+   • DATASET_4_WEEK4.xlsx
+
+================================================================================
+                    SYSTEM REQUIREMENTS
+================================================================================
+
+Make sure these are running BEFORE testing:
+
+✓ Backend: http://localhost:8000 (uvicorn)
+  └─ Check: You can access backend API
+
+✓ Frontend: http://localhost:3000 (React)
+  └─ Check: You can access Settings page
+
+✓ Database: MySQL running
+  └─ Check: Backend can connect
+
+✓ Redis: Optional but recommended
+  └─ Check: For async processing
+
+ALL should be running for best results!
+
+================================================================================
+                    TROUBLESHOOTING QUICK GUIDE
+================================================================================
+
+Issue: Scores don't change after upload
+→ Refresh page (Ctrl+R)
+→ Wait 30 seconds
+→ Check backend logs (look for errors)
+
+Issue: Upload takes too long
+→ Normal: 20-30 seconds per upload
+→ If > 60 seconds: Check backend for issues
+
+Issue: Upload fails
+→ Check file exists: DATASET_1_INITIAL.xlsx
+→ Check backend is running
+→ Check database connection
+
+Issue: Alerts don't update
+→ Wait 1 minute
+→ Refresh page
+→ Try uploading next dataset
+
+Issue: Recommendations missing
+→ Wait 1-2 minutes
+→ Check backend logs
+→ Verify all features computed
+
+================================================================================
+                    SUCCESS LOOKS LIKE THIS
+================================================================================
+
+Upload 1:
+Dashboard shows:
+  • MOBILE: 90 (HIGH) ✅
+  • CARD: 70 (MEDIUM) ⚠️
+  • ATM: 42 (LOW) 🚨
+Rankings: 90 > 70 > 42
+Alerts: 0 / 3 / 6+
+Average: 67.3
+
+↓ (Click upload again)
+
+Upload 2:
+Dashboard shows:
+  • MOBILE: 92+ (HIGH) ✅ (CHANGED!)
+  • CARD: 70 (MEDIUM) ⚠️
+  • ATM: 40- (LOW) 🚨 (CHANGED!)
+Rankings: 92+ > 70 > 40- (NEW!)
+Alerts: 0 / 3 / 8+ (NEW!)
+Average: 67.3 (CHANGED!)
+
+← This is what SUCCESS looks like!
+
+If you see changes on EVERY page after each upload:
+   ✅ SYSTEM WORKING CORRECTLY!
+
+================================================================================
+                    READY TO START?
+================================================================================
+
+Step 1: Read this file (you're done!)
+
+Step 2: Go to http://localhost:3000/dashboard/settings
+
+Step 3: Click "Upload KPI Data"
+
+Step 4: Select DATASET_1_INITIAL.xlsx
+
+Step 5: After completion, verify initial data appears
+
+Step 6: Repeat for datasets 2, 3, 4
+
+Step 7: Each time, verify SCORES CHANGED and all pages updated
+
+Step 8: If everything changes → SUCCESS!
+
+================================================================================
+                    SUPPORTING FILES
+================================================================================
+
+For detailed information:
+   • Read PROGRESSIVE_TEST_GUIDE.md for full explanation
+   • Read QUICK_PROGRESSIVE_TEST.txt for quick reference
+   • All 4 dataset files are ready in this folder
+
+For code/generation details:
+   • See generate_progressive_datasets.py
+
+================================================================================
+
+🎉 Everything is ready! Start uploading and verify data changes!
+
+First upload: DATASET_1_INITIAL.xlsx
+Expected: Scores 90, 70, 42
+
+Second upload: DATASET_2_WEEK2.xlsx
+Expected: Scores 92+, 70, 40- (should be DIFFERENT!)
+
+Let's test! 🚀
+
+================================================================================

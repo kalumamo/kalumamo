@@ -1,0 +1,185 @@
+================================================================================
+AHADU PULSE — QUICK TEST DATASET SUMMARY
+================================================================================
+
+✅ File Created: TEST_DATASET_3_PRODUCTS.xlsx
+
+📊 THREE TEST PRODUCTS (with clear performance differences)
+================================================================================
+
+1️⃣ MOBILE_01 — HIGH PERFORMER ✅
+   └─ Score: 88-92
+   └─ Tier: HIGH (Green)
+   └─ Rank: #1
+   └─ Key Metrics: 96% txn success, 99.8% uptime, 4.7 CSAT
+   └─ Alerts: NONE (optimal)
+   └─ Recommendations: Maintain standards, share best practices
+
+2️⃣ CARD_01 — MEDIUM PERFORMER ⚠️
+   └─ Score: 65-75
+   └─ Tier: MEDIUM (Yellow)
+   └─ Rank: #2
+   └─ Key Metrics: 90% txn success, 97.5% uptime, 3.8 CSAT
+   └─ Alerts: 3 warnings (uptime, API errors, CSAT declining)
+   └─ Recommendations: Fix infrastructure, improve support
+
+3️⃣ ATM_01 — LOW PERFORMER 🚨 CRITICAL
+   └─ Score: 35-45
+   └─ Tier: LOW (Red)
+   └─ Rank: #3
+   └─ Key Metrics: 80% txn success, 94.2% uptime, 2.9 CSAT
+   └─ Alerts: 6 CRITICAL alerts (uptime, API failure, fraud, CSAT)
+   └─ Recommendations: URGENT hardware fixes, maintenance plan, security audit
+
+================================================================================
+HOW TO TEST
+================================================================================
+
+1. UPLOAD
+   → Settings page
+   → Click "Upload KPI Data"
+   → Select: TEST_DATASET_3_PRODUCTS.xlsx
+   → Watch automatic processing (features → scores → alerts → recommendations)
+
+2. VERIFY IN DASHBOARD
+   → Rankings page: Should show 3 products ranked by score (90 > 70 > 42)
+   → Scores page: Each product shows score + tier + change
+   → Alerts page: ATM_01 should have 6+ CRITICAL alerts
+   → Recommendations: Should have 11+ total recommendations
+
+3. CHECK EACH PAGE
+   ✓ Dashboard      → 3 products displayed
+   ✓ Rankings       → Sorted HIGH → MEDIUM → LOW
+   ✓ Scores         → Individual scores with tiers
+   ✓ Alerts         → Critical/Warning severity clearly visible
+   ✓ Recommendations → AI-generated action items per product
+
+================================================================================
+EXPECTED OUTPUTS SUMMARY
+================================================================================
+
+SCORES:
+├─ MOBILE_01:  88-92  (HIGH)   ✅ Excellent
+├─ CARD_01:    65-75  (MEDIUM) ⚠️ Needs attention
+└─ ATM_01:     35-45  (LOW)    🚨 Critical
+
+RANKINGS:
+├─ Rank 1: MOBILE_01  (Score 90)
+├─ Rank 2: CARD_01    (Score 70)
+└─ Rank 3: ATM_01     (Score 42)
+
+ALERTS (Total: ~10):
+├─ MOBILE_01:  0 alerts (optimal)
+├─ CARD_01:    3 warnings
+└─ ATM_01:     6+ critical alerts
+
+RECOMMENDATIONS (Total: 11+):
+├─ MOBILE_01:  1 recommendation
+├─ CARD_01:    4 recommendations
+└─ ATM_01:     6+ urgent recommendations
+
+================================================================================
+KEY METRICS COMPARISON
+================================================================================
+
+Metric                    MOBILE_01    CARD_01      ATM_01
+─────────────────────────────────────────────────────────
+Active User %             80%          58%          40%     ← Lower = worse
+Txn Success Rate          96%          90%          80%     ← Lower = worse
+Uptime %                  99.8%        97.5%        94.2%   ← Lower = worse
+CSAT Score                4.7/5        3.8/5        2.9/5   ← Lower = worse
+Response Time (ms)        250          420          850     ← Higher = worse
+API Error Rate %          0.5%         2.2%         6.8%    ← Higher = worse
+Fraud Incidents           2            8            24      ← Higher = worse
+Complaint Resolution %    93%          80%          70%     ← Lower = worse
+
+Result: MOBILE_01 optimal, CARD_01 concerning, ATM_01 critical
+
+================================================================================
+EXCEL FILE CONTENTS
+================================================================================
+
+Sheet 1: "Upload_Ready" (Color-coded)
+  ├─ MOBILE_01 (Green background)  — HIGH performer data
+  ├─ CARD_01   (Yellow background) — MEDIUM performer data
+  └─ ATM_01    (Red background)    — LOW performer data
+
+Sheet 2: "Legend"
+  └─ Description of each product scenario
+     Expected scores, tiers, and key metrics
+
+Sheet 3: "Expected_Outputs"
+  └─ What the system should calculate for each product
+     Scores, tiers, alerts, and sample recommendations
+
+================================================================================
+TESTING CHECKLIST
+================================================================================
+
+Before Upload:
+  ☐ Backend running (http://localhost:8000)
+  ☐ Frontend running (http://localhost:3000)
+  ☐ File exists: TEST_DATASET_3_PRODUCTS.xlsx
+
+During Upload:
+  ☐ File upload completes
+  ☐ All 3 rows imported successfully
+  ☐ 3 feature records computed
+  ☐ All 3 products scored
+  ☐ Alerts and recommendations generated
+
+After Upload - Check Rankings Page:
+  ☐ MOBILE_01 at #1 (score 88-92)
+  ☐ CARD_01 at #2 (score 65-75)
+  ☐ ATM_01 at #3 (score 35-45)
+
+After Upload - Check Scores Page:
+  ☐ MOBILE_01: HIGH tier (green)
+  ☐ CARD_01: MEDIUM tier (yellow)
+  ☐ ATM_01: LOW tier (red)
+  ☐ Each shows performance score + tier badge
+
+After Upload - Check Alerts Page:
+  ☐ MOBILE_01: 0 alerts (optimal)
+  ☐ CARD_01: 3+ warnings
+  ☐ ATM_01: 6+ critical alerts
+  ☐ Alert severity clearly color-coded
+
+After Upload - Check Recommendations:
+  ☐ MOBILE_01: 1 recommendation (maintain)
+  ☐ CARD_01: 4 recommendations (improvements)
+  ☐ ATM_01: 6+ recommendations (urgent fixes)
+  ☐ Each recommendation is detailed and actionable
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Q: File won't upload?
+A: Check backend logs (uvicorn), ensure database is running
+
+Q: Scores show but alerts don't?
+A: Wait 30 seconds after upload, refresh page
+
+Q: All products showing same score?
+A: Check that ML models loaded correctly (check backend logs)
+
+Q: Rankings not sorted correctly?
+A: Clear browser cache, refresh dashboard page
+
+Q: Want to re-test?
+A: Go to Settings → Run Feature Engineering button manually
+
+================================================================================
+
+READY TO TEST? 🚀
+
+1. Open: http://localhost:3000/dashboard/settings
+2. Click: "Upload KPI Data"
+3. Select: TEST_DATASET_3_PRODUCTS.xlsx
+4. Watch: Automatic processing
+5. Check: Dashboard → Rankings → Scores → Alerts → Recommendations
+
+All three products will clearly show different performance levels!
+
+================================================================================

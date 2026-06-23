@@ -1,0 +1,156 @@
+═══════════════════════════════════════════════════════════════════════════════
+  AHADU PULSE - SCORES FIX IS COMPLETE
+═══════════════════════════════════════════════════════════════════════════════
+
+STATUS: ✅ FIX APPLIED - Backend restarted
+
+The issue was: Alerts table not being deleted before Scores
+Result: Foreign key violation, old data not cleaned up, scores unchanged
+
+FIX: Added Alert deletion in correct order
+- Delete Recommendations first ✓
+- Delete Alerts second ✓ (NEW!)
+- Delete Scores third ✓
+- Delete Features fourth ✓
+
+═══════════════════════════════════════════════════════════════════════════════
+  QUICK TEST (2 MINUTES)
+═══════════════════════════════════════════════════════════════════════════════
+
+Step 1: Open Dashboard
+  → Go to: http://localhost:3000/dashboard/settings
+
+Step 2: Upload Dataset 1
+  → Click "Upload Data File"
+  → Select: DATASET_1_INITIAL.xlsx
+  → Wait for success message
+  → Check scores appear: 90, 70, 42
+
+Step 3: Upload Dataset 2
+  → Click "Upload Data File" again
+  → Select: DATASET_2_WEEK2.xlsx
+  → Wait for success message
+  → CHECK SCORES: Should be 92+, 70, 40-
+  
+  IF SCORES CHANGED → FIX WORKS! ✅
+  IF SCORES SAME → Problem still exists
+
+
+═══════════════════════════════════════════════════════════════════════════════
+  WHAT TO LOOK FOR
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ SUCCESS SIGNS:
+  • Dataset 1: Scores show 90, 70, 42
+  • Dataset 2: Scores show DIFFERENT values (92+, 70, 40-)
+  • Dashboard refreshes automatically (no manual refresh needed)
+  • Rankings update automatically
+  • Alerts page shows new alerts
+  • Recommendations page shows new recommendations
+
+✗ FAILURE SIGNS:
+  • Scores stay same (e.g., still 90, 70, 42 after Dataset 2)
+  • Dashboard doesn't refresh
+  • Browser shows error
+  • Upload says "success" but data didn't change
+
+
+═══════════════════════════════════════════════════════════════════════════════
+  FILE LOCATIONS
+═══════════════════════════════════════════════════════════════════════════════
+
+All in: d:\video\AHADU PULSE\
+
+DATASET_1_INITIAL.xlsx    ← Upload this first
+DATASET_2_WEEK2.xlsx      ← Upload this second (test if scores change)
+DATASET_3_WEEK3.xlsx      ← Optional: Upload to verify changes continue
+DATASET_4_WEEK4.xlsx      ← Optional: Final dataset
+
+
+═══════════════════════════════════════════════════════════════════════════════
+  EXPECTED SCORE PROGRESSION
+═══════════════════════════════════════════════════════════════════════════════
+
+Dataset 1:
+  MOBILE_01: 90   (HIGH - good)
+  CARD_01:   70   (MEDIUM - average)
+  ATM_01:    42   (LOW - poor)
+
+Dataset 2 (SCORES SHOULD CHANGE HERE):
+  MOBILE_01: 92+  (HIGH - better)
+  CARD_01:   70   (MEDIUM - same)
+  ATM_01:    40-  (LOW - worse)
+
+Dataset 3 (CONTINUE CHANGING):
+  MOBILE_01: 94+  (HIGH - improving)
+  CARD_01:   68-  (MEDIUM - declining)
+  ATM_01:    35-  (LOW - degrading)
+
+Dataset 4 (FINAL):
+  MOBILE_01: 96+  (HIGH - best)
+  CARD_01:   65-  (MEDIUM - continued decline)
+  ATM_01:    30   (LOW - critical)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+  BACKEND STATUS
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Backend: Running on port 8000
+✅ Frontend: Running on port 3000
+✅ Database: Connected
+✅ Fix: Applied (Alerts deletion added)
+✅ Ready: YES
+
+
+═══════════════════════════════════════════════════════════════════════════════
+  IF SCORES STILL DON'T CHANGE
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Check backend is running:
+   netstat -ano | findstr ":8000"
+   Should show: LISTENING
+
+2. Restart backend:
+   Kill Python processes and restart:
+   python -m uvicorn app.main:app --reload --port 8000
+   (in d:\video\AHADU PULSE\backend directory)
+
+3. Clear browser cache:
+   Ctrl+Shift+Delete → Clear browsing data
+
+4. Try upload again
+
+5. Check for errors in browser console (F12)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+  REPORT YOUR RESULT
+═══════════════════════════════════════════════════════════════════════════════
+
+After uploading Dataset 2, tell us:
+
+1. Did scores change?
+   ✅ YES - Fix is working!
+   ❌ NO - More investigation needed
+
+2. Any errors shown?
+   Share error message if any
+
+3. Did all pages refresh?
+   ✅ Dashboard
+   ✅ Scores
+   ✅ Rankings
+   ✅ Alerts
+   ✅ Recommendations
+
+═══════════════════════════════════════════════════════════════════════════════
+  READY TO TEST!
+═══════════════════════════════════════════════════════════════════════════════
+
+Go to: http://localhost:3000/dashboard/settings
+
+Upload DATASET_1_INITIAL.xlsx first
+Then upload DATASET_2_WEEK2.xlsx and check if scores changed!
+
+🚀 START NOW! 🚀
